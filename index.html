@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Criaê - Inovando marcas e Revolucionando sonhos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="logof.png" alt="Criaê Logo" class="logo-img">
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#time">Time</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-list">
+        <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+        <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+        <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+        <li><a href="#time" class="mobile-nav-link">Time</a></li>
+        <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Inovando marcas e<br />
+        <span class="hero-highlight">Revolucionando sonhos</span>
+      </h1>
+      <p class="hero-subtitle">
+        Transformamos ideias em realidade digital
+      </p>
+    </div>
+  </section>
+
+  <!-- Início Section -->
+  <section id="inicio" class="section">
+    <div class="container">
+      <h2 class="section-title">Bem-vindo à Criaê</h2>
+      <p class="section-text">
+        Somos uma agência dedicada a impulsionar microempreendedores e negócios locais 
+        usando estratégia, criatividade e propósito real. Nossa missão é transformar 
+        sonhos em realidade digital.
+      </p>
+    </div>
+  </section>
+
+  
+
+  <!-- Sobre Section -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre nós</h2>
+      <p class="section-text">
+        Somos uma equipe formada por estudantes da periferia, unida pelo propósito de transformar realidades por meio da tecnologia. Nosso compromisso é dar voz, visibilidade e oportunidade a quem busca crescer com autenticidade, significado e propósito. Acreditamos que o acesso ao digital pode ser um poderoso caminho para democratizar oportunidades e construir um futuro mais justo.
+      </p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Time Diverso</h3>
+          <p class="feature-text">Estudantes talentosos da periferia</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Comunicação Clara</h3>
+          <p class="feature-text">Transparência em cada projeto</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Suporte Contínuo</h3>
+          <p class="feature-text">Acompanhamento pós-entrega</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços Section -->
+  <section id="servicos" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16,18 22,12 16,6"/>
+              <polyline points="8,6 2,12 8,18"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Desenvolvimento Web</h3>
+          <p class="service-text">A gente não monta página só por montar. Criamos presença digital de verdade: sites rápidos, bonitos e que funcionam no celular sem travar.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Marketing Digital</h3>
+          <p class="service-text">Sua marca não vai mais depender da sorte. Pensamos estratégia, criamos conteúdo com propósito e investimos só onde dá retorno.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="13.5" cy="6.5" r=".5"/>
+              <circle cx="17.5" cy="10.5" r=".5"/>
+              <circle cx="8.5" cy="7.5" r=".5"/>
+              <circle cx="6.5" cy="11.5" r=".5"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Identidade Visual</h3>
+          <p class="service-text">Logo marcante, cores que representam e um estilo que faz sua marca ser lembrada. Nada de arte genérica, aqui é identidade de verdade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Time Section -->
+  <section id="time" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nosso Time</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="giovanna.jpg.jpg" alt="Giovanna" class="team-photo">
+          <h3 class="team-name">Giovanna</h3>
+          <p class="team-role">Redatora & Apoio em Programação</p>
+        </div>
+        
+        <div class="team-card">
+          <img src="eu.jpg" alt="Natalia" class="team-photo">
+          <h3 class="team-name">Natalia</h3>
+          <p class="team-role">Co-Líder & Programação</p>
+        </div>
+        
+        <div class="team-card">
+          <img src="thigo.jpg.jpg" alt="Thiago" class="team-photo">
+          <h3 class="team-name">Thiago</h3>
+          <p class="team-role">Gestor de Marketing</p>
+        </div>
+        
+        <div class="team-card">
+          <img src="PHOTO-2025-06-06-19-57-13.jpg" alt="Yuri" class="team-photo">
+          <h3 class="team-name">Yuri</h3>
+          <p class="team-role">Analista de Marketing</p>
+        </div>
+        
+        <div class="team-card">
+          <img src="wallace.jpg.jpg" alt="Wallace" class="team-photo">
+          <h3 class="team-name">Wallace</h3>
+          <p class="team-role"> Co-Lider & Administração </p>
+        </div>
+        
+        <div class="team-card">
+          <img src="felipe.jpg" alt="Felipe" class="team-photo">
+          <h3 class="team-name">Felipe</h3>
+          <p class="team-role">Desenvolvedor Web</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section id="contato" class="section">
+    <div class="container">
+      <h2 class="section-title">Fale conosco</h2>
+      <p class="section-text contact-subtitle">
+        Preencha o formulário abaixo e vamos conversar sobre sua ideia:
+      </p>
+      
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome completo *</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Digite seu nome completo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Conte-nos sobre seu projeto *</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Descreva sua ideia, objetivos e como podemos ajudar..." required></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logof.png" alt="Criaê Logo" class="footer-logo-img">
+          <p class="footer-tagline">Inovando marcas com propósito</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+              <path d="M9 18c-4.51 2-5-2-7-2"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect width="4" height="12" x="2" y="9"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <p class="footer-copyright">
+        &copy; 2025 Criaê — Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Voltar ao topo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Botão de Acessibilidade -->
+  <button class="accessibility-btn" id="accessibilityBtn" aria-label="Menu de Acessibilidade" title="Opções de Acessibilidade">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </button>
+
+  <!-- Menu de Acessibilidade -->
+  <div class="accessibility-menu" id="accessibilityMenu">
+    <h3 class="accessibility-title">Acessibilidade</h3>
+    
+    <button class="accessibility-option" id="audioBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+      <span>Áudio Descrição</span>
+    </button>
+
+    <button class="accessibility-option" id="contrastBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2a10 10 0 0 0 0 20V2z"/>
+      </svg>
+      <span>Alto Contraste</span>
+    </button>
+
+    <button class="accessibility-option" id="fontBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="4,7 4,4 20,4 20,7"/>
+        <line x1="9" y1="20" x2="15" y2="20"/>
+        <line x1="12" y1="4" x2="12" y2="20"/>
+      </svg>
+      <span>Fontes Grandes</span>
+    </button>
+
+    <button class="accessibility-option" id="readerBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      <span>Leitor de Tela</span>
+    </button>
+
+    <div class="accessibility-footer">
+      <p>Clique nas opções para ativar/desativar</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
