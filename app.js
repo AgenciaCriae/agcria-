@@ -1,13 +1,6 @@
 // Variáveis globais
 let isMenuOpen = false;
 let showScrollTop = false;
-let isAccessibilityMenuOpen = false;
-let accessibilitySettings = {
-  audio: false,
-  highContrast: false,
-  largeFonts: false,
-  screenReader: false
-};
 
 // Elementos do DOM
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -15,8 +8,6 @@ const mobileMenu = document.getElementById('mobileMenu');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const contactForm = document.getElementById('contactForm');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-const accessibilityBtn = document.getElementById('accessibilityBtn');
-const accessibilityMenu = document.getElementById('accessibilityMenu');
 
 // Dados do formulário
 let formData = {
@@ -29,7 +20,6 @@ let formData = {
 document.addEventListener('DOMContentLoaded', function() {
   initializeEventListeners();
   initializeScrollHandler();
-  initializeAccessibility();
 });
 
 // Configurar todos os event listeners
@@ -75,24 +65,6 @@ function initializeScrollHandler() {
   window.addEventListener('scroll', throttle(handleScroll, 16));
 }
 
-// Inicializar funcionalidades de acessibilidade
-function initializeAccessibility() {
-  if (accessibilityBtn) {
-    accessibilityBtn.addEventListener('click', toggleAccessibilityMenu);
-  }
-
-  // Event listeners para opções de acessibilidade
-  const audioBtn = document.getElementById('audioBtn');
-  const contrastBtn = document.getElementById('contrastBtn');
-  const fontBtn = document.getElementById('fontBtn');
-  const readerBtn = document.getElementById('readerBtn');
-
-  if (audioBtn) audioBtn.addEventListener('click', () => toggleAccessibilitySetting('audio'));
-  if (contrastBtn) contrastBtn.addEventListener('click', () => toggleAccessibilitySetting('highContrast'));
-  if (fontBtn) fontBtn.addEventListener('click', () => toggleAccessibilitySetting('largeFonts'));
-  if (readerBtn) readerBtn.addEventListener('click', () => toggleAccessibilitySetting('screenReader'));
-}
-
 // Toggle do menu mobile
 function toggleMobileMenu() {
   isMenuOpen = !isMenuOpen;
@@ -125,82 +97,6 @@ function closeMobileMenu() {
   if (mobileMenuBtn) {
     mobileMenuBtn.classList.remove('active');
   }
-}
-
-// Toggle do menu de acessibilidade
-function toggleAccessibilityMenu() {
-  isAccessibilityMenuOpen = !isAccessibilityMenuOpen;
-  
-  if (accessibilityMenu) {
-    if (isAccessibilityMenuOpen) {
-      accessibilityMenu.classList.add('active');
-    } else {
-      accessibilityMenu.classList.remove('active');
-    }
-  }
-}
-
-// Toggle das configurações de acessibilidade
-function toggleAccessibilitySetting(setting) {
-  accessibilitySettings[setting] = !accessibilitySettings[setting];
-  
-  // Aplicar as configurações ao documento
-  const body = document.body;
-  const button = document.getElementById(getButtonId(setting));
-  
-  switch (setting) {
-    case 'highContrast':
-      if (accessibilitySettings.highContrast) {
-        body.style.filter = 'contrast(150%) brightness(120%)';
-        button?.classList.add('active');
-      } else {
-        body.style.filter = '';
-        button?.classList.remove('active');
-      }
-      break;
-      
-    case 'largeFonts':
-      if (accessibilitySettings.largeFonts) {
-        body.style.fontSize = '120%';
-        button?.classList.add('active');
-      } else {
-        body.style.fontSize = '';
-        button?.classList.remove('active');
-      }
-      break;
-      
-    case 'audio':
-      if (accessibilitySettings.audio) {
-        console.log('Áudio descrição ativada');
-        alert('Áudio descrição ativada! Esta funcionalidade estará disponível em breve.');
-        button?.classList.add('active');
-      } else {
-        console.log('Áudio descrição desativada');
-        button?.classList.remove('active');
-      }
-      break;
-      
-    case 'screenReader':
-      if (accessibilitySettings.screenReader) {
-        console.log('Leitor de tela ativado');
-        alert('Compatibilidade com leitor de tela melhorada!');
-        button?.classList.add('active');
-      } else {
-        button?.classList.remove('active');
-      }
-      break;
-  }
-}
-
-// Obter ID do botão baseado na configuração
-function getButtonId(setting) {
-  const buttonMap = {
-    audio: 'audioBtn',
-    highContrast: 'contrastBtn',
-    largeFonts: 'fontBtn',
-    screenReader: 'readerBtn'
-  };
-  return buttonMap[setting];
 }
 
 // Handler de scroll
@@ -239,7 +135,7 @@ function handleSmoothScroll(e) {
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
-      const headerHeight = 80; // Altura do header fixo
+      const headerHeight = 80;
       const targetPosition = targetElement.offsetTop - headerHeight;
       
       window.scrollTo({
@@ -289,7 +185,7 @@ function handleFormSubmit(e) {
       return;
     }
     
-    // Simular envio (aqui você integraria com um serviço real)
+    // Simular envio
     console.log('Formulário enviado:', formData);
     
     // Feedback para o usuário
@@ -346,41 +242,3 @@ function throttle(func, wait) {
 
 // Event listener para redimensionamento
 window.addEventListener('resize', handleResize);
-
-// Fechar menu de acessibilidade ao clicar fora
-document.addEventListener('click', function(e) {
-  if (isAccessibilityMenuOpen && 
-      !accessibilityBtn?.contains(e.target) && 
-      !accessibilityMenu?.contains(e.target)) {
-    toggleAccessibilityMenu();
-  }
-});
-
-// Função para animações de entrada (opcional)
-function initializeAnimations() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-  
-  // Observar elementos que devem animar
-  const animateElements = document.querySelectorAll('.section');
-  animateElements.forEach(el => {
-    observer.observe(el);
-  });
-}
-
-// Inicializar animações quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
-  // Pequeno delay para garantir que tudo esteja carregado
-  setTimeout(initializeAnimations, 100);
-});
