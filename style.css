@@ -22,6 +22,8 @@
   --gray-900: #111827;
   --blue-600: #2563eb;
   --blue-700: #1d4ed8;
+  --linkedin-blue: #0077b5;
+  --linkedin-hover: #005885;
   --font-family: 'Poppins', sans-serif;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -597,6 +599,33 @@ body {
 .team-role {
   color: var(--primary-color);
   font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--linkedin-blue);
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-btn:hover {
+  background-color: var(--linkedin-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.4);
+}
+
+.linkedin-btn svg {
+  flex-shrink: 0;
 }
 
 /* Contact Form */
@@ -751,6 +780,14 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+  .linkedin-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .section-title {
     font-size: 2rem;
